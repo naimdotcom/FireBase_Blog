@@ -25,6 +25,7 @@ export const NavbarComponent = () => {
   const auth = getAuth();
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
   const getUserData = (userId) => {
     if (!userId) return; // Ensure userId is available
     const starCountRef = ref(db, `users/${userId}`);
@@ -96,7 +97,7 @@ export const NavbarComponent = () => {
               >
                 <NavLink
                   to={`/user/${
-                    user?.userUid ? user.userUid : auth.currentUser.uid
+                    user?.userUid ? user?.userUid : auth?.currentUser?.uid
                   }`}
                 >
                   <DropdownItem>Account</DropdownItem>
