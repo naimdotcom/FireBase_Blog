@@ -87,7 +87,12 @@ export const SignUpCard = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     const { email, password } = userInfo;
-    if (!userInfo?.username || !userInfo.email || !userInfo.password) {
+    if (
+      !userInfo?.username ||
+      !userInfo.email ||
+      !userInfo.password ||
+      !imageUrl
+    ) {
       toast("All fields are required", {
         description: "Please fill all the fields",
       });
@@ -113,6 +118,7 @@ export const SignUpCard = () => {
           email: userInfo.email ? userInfo.email : " ",
           profileImage: imageUrl ? imageUrl : " ",
           createdAt: Date.now(),
+          userUid: user?.uid ? user?.uid : " ",
         });
       })
 
