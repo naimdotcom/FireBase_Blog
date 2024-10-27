@@ -2,7 +2,7 @@ import { getAuth } from "firebase/auth";
 import { getDatabase, onValue, ref } from "firebase/database";
 import React, { useEffect, useState } from "react";
 
-import { CardComponent } from "../../components/KeepComponent/cardComponent";
+import { CardComponent } from "../../components/KeepComponent/CardComponent";
 import { SkeletonComponent } from "../../components/KeepComponent/SkeletonComponent";
 
 function Home() {

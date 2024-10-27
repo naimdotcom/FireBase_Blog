@@ -2,7 +2,7 @@ import { getDatabase, onValue, ref } from "firebase/database";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { SkeletonComponent } from "../../components/KeepComponent/SkeletonComponent";
-import { CardComponent } from "../../components/KeepComponent/cardComponent";
+import { CardComponent } from "../../components/KeepComponent/CardComponent";
 
 function Account() {
   const { authId } = useParams();
