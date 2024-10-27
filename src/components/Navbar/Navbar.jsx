@@ -94,7 +94,11 @@ export const NavbarComponent = () => {
                 align="end"
                 className="border border-metal-100 dark:border-metal-800"
               >
-                <NavLink to={`/user/${user?.userUid}`}>
+                <NavLink
+                  to={`/user/${
+                    user?.userUid ? user.userUid : auth.currentUser.uid
+                  }`}
+                >
                   <DropdownItem>Account</DropdownItem>
                 </NavLink>
                 <DropdownItem onClick={handleLogout}>Logout</DropdownItem>
